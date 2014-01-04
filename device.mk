@@ -20,7 +20,7 @@
 # Everything in this directory will become public
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/tuna/kernel
+LOCAL_KERNEL := device/samsung/tuna-kernel/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel \
-	device/samsung/tuna/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+	device/samsung/tuna-kernel/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
 	device/samsung/tuna/init.tuna.rc:root/init.tuna.rc \
 	device/samsung/tuna/init.tuna.usb.rc:root/init.tuna.usb.rc \
 	device/samsung/tuna/fstab.tuna:root/fstab.tuna \
